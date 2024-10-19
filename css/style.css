@@ -1,0 +1,174 @@
+/* 
+*************************
+ *  Google Fonts Link  *
+*************************
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Afacad Flux:wght@400;500;600;700&display=swap');
+
+
+/* 
+***********************
+    * Typography *
+***********************
+*/
+
+:root {
+    --text-color: #fff;
+    --black-color: #000;
+    --second-color: #ff77ab;
+    --third-color: #dd08dd;
+    --gradient--color: linear-gradient(45deg, var(--second-color), var(--third-color));
+
+    /* 
+    -font size 
+    */
+    --normal-font: 20px;
+    --big-font: 70px;
+    --h1-font: 60px;
+    --h2-font: 40px;
+    --h3-font: 23px;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Afacad Flux', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/*
+*********************
+  * Header Section *
+*********************
+*/
+
+#header {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('../img/back-image.png');
+    background-size: cover;
+    background-position: center;
+    padding: 10px 10%;
+    overflow: hidden;
+    position: relative;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.logo {
+    width: 60px;
+}
+
+.nav__menu {
+    display: flex;
+    gap: 20px;
+}
+
+.nav__link {
+    font-size: var(--normal-font);
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: var(--black-color);
+    transition: color 0.5s, letter-spacing 0.5s;
+}
+
+.nav__link:hover {
+    color: var(--second-color);
+    letter-spacing: 1.5px;
+}
+
+.rounded__btn {
+    display: inline-block;
+    padding: 14px 40px;
+    background: var(--gradient--color);
+    color: var(--text-color);
+    letter-spacing: 1px;
+    font-size: var(--normal-font);
+    font-weight: 500;
+    border-radius: 30px;
+    border-top-right-radius: 0;
+    transition: all .5s;
+}
+
+
+/* 
+************************
+  * Content Section *
+************************
+*/
+
+.content {
+    margin-top: 10%;
+    max-width: 600px;
+}
+
+.content .btn {
+    padding: 15px 80px;
+    text-transform: uppercase;
+    font-size: var(--h3-font);
+    animation-delay: 1.5s;
+}
+
+.rounded__btn:hover {
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 0px;
+}
+
+.content h1 {
+    font-size: var(--big-font);
+    animation-delay: .5s;
+}
+
+.content p {
+    font-size: 20px;
+    margin: 5px 0 30px;
+    animation-delay: 1s;
+}
+
+.img__box {
+    position: absolute;
+    bottom: 0;
+    right: 15%;
+}
+
+.hero__img {
+    width: 470px;
+}
+
+.hero__img.animation__move {
+    animation-delay: 2s;
+}
+
+
+ .animation__move {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: move 0.5s linear forwards;
+ }
+
+ @keyframes move {
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+ }  
